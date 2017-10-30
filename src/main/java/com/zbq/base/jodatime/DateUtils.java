@@ -15,7 +15,7 @@ import java.util.TimeZone;
  * @author zhangboqing
  * @date 2017/10/23
  */
-public class JodaTimeUtils {
+public class DateUtils {
 
     public static final long SECOND = 1000;                          //1秒 java已毫秒为单位
 
