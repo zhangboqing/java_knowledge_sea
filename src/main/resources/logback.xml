@@ -1,8 +1,7 @@
-<configuration>
+<configuration debug="true" >
 
     <!-- 定义日志文件 输入位置 -->
     <property name="log_dir" value="/Users/zhangboqing/Software/MyGithub/java_knowledge_sea/src/main/java/com/zbq/base/log" />
-    <!--<property name="log_dir" value="./com/zbq/base/log" />-->
     <!-- 日志最大的历史 30天 -->
     <property name="maxHistory" value="30"/>
 
