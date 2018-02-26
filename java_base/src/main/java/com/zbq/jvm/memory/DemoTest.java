@@ -22,4 +22,20 @@ public class DemoTest {
 //        System.out.println(str3.intern() == str3);
 //        System.out.println(str4.intern() == str4);
     }
+
+
+    @Test
+    public void run2() {
+     test(100);
+    }
+
+
+    public void test(Integer n) {
+
+        if (n > 0) {
+            System.out.println(n);
+            test(--n);
+        }
+
+    }
  }

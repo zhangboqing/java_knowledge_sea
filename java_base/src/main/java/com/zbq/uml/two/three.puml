@@ -1,0 +1,39 @@
+@startuml
+
+|Cummuter|
+start
+:Start Session;
+|#AntiqueWhite|Tichet vending machine|
+:Request Trip Info;
+|Cummuter|
+:Provide Trip Info;
+|Tichet vending machine|
+:Process Trip Info;
+:Request Payment;
+|Cummuter|
+:Provide Payment Info;
+|Tichet vending machine|
+:Process Payment;
+
+if (pay with cash) then (yes)
+
+elseif (pay with card) then (yes)
+|bank|
+  :Authorize Card Payment;
+else
+  :Text else;
+endif
+|Cummuter|
+:Tichet;
+:Get Tichet;
+|Tichet vending machine|
+:Dispense Change;
+|Cummuter|
+:Change;
+:Get Change;
+|Tichet vending machine|
+:show Thank you;
+|Cummuter|
+
+stop
+@enduml

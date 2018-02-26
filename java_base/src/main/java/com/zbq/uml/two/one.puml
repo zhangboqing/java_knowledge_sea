@@ -1,0 +1,14 @@
+@startuml
+left to right direction
+
+(View  Items) <.. (Search Items):<<extend>>>
+(View  Items) <.. (Browse Items):<<extend>>>
+(View  Items) <.. (View Recommended Items):<<extend>>>
+(View  Items) <.. (Add to Shopping Cart):<<extend>>>
+(View  Items) <.. (Add to Wish List):<<extend>>>
+
+(View Recommended Items) ..> (Customer Authentication):<<include>>>
+(Add to Shopping Cart) <.. (Customer Authentication):<<extend>>>
+(Add to Wish List) ..> (Customer Authentication):<<include>>>
+
+@enduml

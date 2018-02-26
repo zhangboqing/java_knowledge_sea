@@ -1,0 +1,18 @@
+@startuml
+
+loop
+    Customer -> Shop:search inventory
+    Shop -> Customer:search results
+opt
+    Customer -> Shop:view book description
+end
+opt
+    Customer -> Shop:add shopping cart
+end
+end
+
+opt
+   ref over Customer, Shop : Checkout
+end
+
+@enduml

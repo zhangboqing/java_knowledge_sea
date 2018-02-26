@@ -1,0 +1,38 @@
+@startuml
+
+
+WebUser -*> Customer
+
+WebUser --> ShoppingCart
+
+ShoppingCart --> LineItem
+
+LineItem --> Product
+
+Customer --> Account
+
+ShoppingCart -> Account
+
+Account -> Order
+
+LineItem -> Order
+
+Order -> Payment
+
+Payment --> Account
+
+
+
+@enduml
+
+
+
+
+
+
+
+
+
+
+
+
