@@ -121,6 +121,30 @@ public class StringTest {
     }
 
 
+    @Test
+    public void run8() {
+
+        Long  categary = -1L;
+
+        System.out.println( categary.equals(-1L));
+
+    }
+
+    @Test
+    public void run9(){
+        String a ="1";
+
+        switch ( a) {
+            case "1":
+                System.out.println(a);
+                break;
+            default:
+                System.out.printf("");
+        }
+
+
+    }
+
 
 
 

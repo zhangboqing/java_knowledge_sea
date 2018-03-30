@@ -112,3 +112,9 @@ Java8 引入了一个新的日期和时间API，位于java.time包下。
  3.所有八种包装类都提供了静态的hashCode方法。
  
 */
+
+/** 6.Optional 类*/
+/*
+    Optional 类已经成为 Java 8 类库的一部分，用来解决空指针异常
+
+*/
