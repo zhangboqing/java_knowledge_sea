@@ -17,4 +17,33 @@ public class BigDecimalTest {
 
         System.out.println(b1.compareTo(b2) > 0);
     }
+
+
+    @Test
+    public void run2() {
+        String s = new String("1233");
+        byte[] bytes = s.getBytes();
+        System.out.println(byte2hex(bytes));
+    }
+
+
+    private static String byte2hex(byte[] bytes) {
+        StringBuilder sign = new StringBuilder();
+        for (int i = 0; i < bytes.length; i++) {
+            String hex = Integer.toHexString(bytes[i] & 0xFF);
+            if (hex.length() == 1) {
+                sign.append("0");
+            }
+            sign.append(hex.toUpperCase());
+        }
+        return sign.toString();
+    }
+
+    public static void main(String[] args) {
+        Integer a = 16;
+        byte b = a.byteValue();
+        System.out.println( 0xFF);
+        String hex = Integer.toHexString(a);
+        System.out.println(hex);
+    }
 }

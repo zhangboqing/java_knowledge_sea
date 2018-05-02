@@ -1,4 +1,42 @@
-# \u670D\u52A1\u5668\u914D\u7F6E
 server:
  port: 8090
  context-path: /sea
+
+# Redis数据库索引（默认为0）
+spring:
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    password: beiquan8780
+    pool:
+      maxActive: 8
+      maxWait: -1
+      maxIdle: 8
+      minIdle: 0
+    timeout: 0
+
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/daotable?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: 123
+    driver-class-name: com.mysql.jdbc.Driver
+    max-idle: 10
+    max-wait: 1000
+    min-idle: 5
+    initial-size: 5
+    output.ansi.enabled: always
+#    mvc.static-path-pattern: /resources/**
+
+mybatis:
+#  mapperLocations: classpath:com/libei/dao/mysql/mapper/*.xml
+  typeAliasesPackage: com.zbq.domain
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+
+# 系统自带日志打印级别设置
+logging:
+  level.com.zbq: debug
+#  file: libei.log

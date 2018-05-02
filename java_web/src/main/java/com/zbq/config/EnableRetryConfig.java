@@ -1,4 +1,4 @@
-package com.zbq.controller.config;
+package com.zbq.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.retry.annotation.EnableRetry;
