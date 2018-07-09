@@ -53,7 +53,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
-			<version>4.3.12.RELEASE</version>
+			<version>5.0.7.RELEASE</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
@@ -138,7 +138,26 @@
 			<artifactId>lombok</artifactId>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/org.ow2.asm/asm -->
+		<dependency>
+			<groupId>org.ow2.asm</groupId>
+			<artifactId>asm</artifactId>
+			<version>6.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>me.ele.openapi</groupId>
+			<artifactId>eleme-openapi-sdk</artifactId>
+			<version>1.15.25</version>
+		</dependency>
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+
 	</dependencies>
+
 
 	<build>
 		<plugins>

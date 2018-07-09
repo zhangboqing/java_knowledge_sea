@@ -1,6 +1,5 @@
 package com.zbq.base.jodatime;
 
-import com.sun.istack.internal.Nullable;
 import org.apache.commons.lang3.StringUtils;
 import org.joda.time.*;
 
@@ -111,7 +110,6 @@ public class DateUtils {
      * @param parrten
      * @return
      */
-    @Nullable
     public static String format(Date date, TimeZone timeZone, String parrten) {
         if (date == null) {
             return null;
@@ -266,7 +264,7 @@ public class DateUtils {
      * @param date
      * @return yyyy-MM-dd HH:mm:ss
      */
-    @Nullable
+
     public static String format(Date date) {
         if (date == null) {
             return null;
@@ -282,7 +280,7 @@ public class DateUtils {
      * @param pattern 日期格式
      * @return
      */
-    @Nullable
+
     public static String format(Date date, String pattern) {
         if (date == null) {
             return null;
@@ -298,7 +296,7 @@ public class DateUtils {
      * @param pattern 日期格式
      * @return
      */
-    @Nullable
+
     public static Date parse(String date, String pattern) {
         if (date == null) {
             return null;
@@ -318,7 +316,6 @@ public class DateUtils {
      * @param date 日期字符串
      * @return
      */
-    @Nullable
     public static Date parse(String date) {
         if (date == null) {
             return null;
@@ -462,7 +459,7 @@ public class DateUtils {
      * @param endDate
      * @return
      */
-    @Nullable
+
     public static Integer diffDay(Date startDate, Date endDate) {
         if (startDate == null || endDate == null) {
             return null;
@@ -531,7 +528,7 @@ public class DateUtils {
      *
      * @return 日期或者 xx小时前||xx分钟前||xx秒前
      */
-    @Nullable
+
     public static String getNewUpdateDateString(Date now, Date createDate) {
         if (now == null || createDate == null) {
             return null;

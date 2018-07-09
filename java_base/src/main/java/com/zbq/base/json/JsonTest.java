@@ -1,6 +1,7 @@
 package com.zbq.base.json;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.zbq.base.json.bean.JsonObj;
 import org.junit.Test;
 
@@ -41,4 +42,8 @@ public class JsonTest {
 //        System.out.println(storeIds);
     }
 
+
+    public static void main(String[] args) {
+        System.out.println(JSONObject.toJSONString(null));
+    }
 }

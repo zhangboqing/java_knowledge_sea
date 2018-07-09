@@ -40,10 +40,22 @@ public class BigDecimalTest {
     }
 
     public static void main(String[] args) {
-        Integer a = 16;
+        /*Integer a = 16;
         byte b = a.byteValue();
         System.out.println( 0xFF);
         String hex = Integer.toHexString(a);
-        System.out.println(hex);
+        System.out.println(hex);*/
+
+//        Double aDouble = new Double(1.1);
+//        System.out.println(aDouble.longValue());
+        double a = 1.0;
+        long b = (long) a;
+
+        System.out.println(a);
+        System.out.println(b);
+
     }
+
+
+
 }
