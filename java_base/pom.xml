@@ -160,6 +160,34 @@
 
 
 	<build>
+		<resources>
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**/*.class</include>
+					<include>**/*.xml</include>
+					<include>**/*.properties</include>
+				</includes>
+			</resource>
+			<!--<resource>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>**.xml</include>
+					<include>**.properties</include>
+				</includes>
+				<excludes>
+					<exclude>ad.properties</exclude>
+					<exclude>application.properties</exclude>
+					<exclude>conf.properties</exclude>
+					<exclude>logback.xml</exclude>
+					<exclude>pay.properties</exclude>
+				</excludes>
+				<filtering>true</filtering>
+			</resource>
+			<resource>
+				<directory>src/main/resources/${profiles.active}</directory>
+			</resource>-->
+		</resources>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

@@ -233,7 +233,7 @@ public class StringTest {
 
 //        System.out.println("11 ".matches("[a-zA-Z0-9]{1,36}"));
 
-        System.out.println(new BigDecimal("200.00").divide(new BigDecimal(100),2,BigDecimal.ROUND_DOWN ));
+        System.out.println(new BigDecimal("200.00").divide(new BigDecimal(100), 2, BigDecimal.ROUND_DOWN));
     }
 
 
@@ -258,11 +258,11 @@ public class StringTest {
     @Test
     public void run15() {
 
-        String[] arr =  {"奶乳饮品","冲饮保健","休闲零食","雪糕冰棍","饼干糕点","方便速食","酒水畅饮","甜心糖果","粮油副食","调料蘸料","家居清洁","美容洗护","个人护理","生鲜果蔬","日用百货","节日礼品","代购香烟","泉水饮料","奶粉","尿裤湿巾","营养辅食","喂养用品","洗护用品","童车童床","妈妈专区","寝具服饰","玩具乐器","母婴护理","安全座椅","母婴清洁","母婴服务","动漫玩具","绘画/DIY","积木拼插","优质奶粉","遥控/电动","娃娃玩具","益智玩具","毛绒布艺","健身玩具","模型玩具","创意减压","其他","自定义"};
+        String[] arr = {"奶乳饮品", "冲饮保健", "休闲零食", "雪糕冰棍", "饼干糕点", "方便速食", "酒水畅饮", "甜心糖果", "粮油副食", "调料蘸料", "家居清洁", "美容洗护", "个人护理", "生鲜果蔬", "日用百货", "节日礼品", "代购香烟", "泉水饮料", "奶粉", "尿裤湿巾", "营养辅食", "喂养用品", "洗护用品", "童车童床", "妈妈专区", "寝具服饰", "玩具乐器", "母婴护理", "安全座椅", "母婴清洁", "母婴服务", "动漫玩具", "绘画/DIY", "积木拼插", "优质奶粉", "遥控/电动", "娃娃玩具", "益智玩具", "毛绒布艺", "健身玩具", "模型玩具", "创意减压", "其他", "自定义"};
 
 
 //        for (String name : arr) {
-            System.out.println(PinYinUtils.getPinyin("保健品"));
+        System.out.println(PinYinUtils.getPinyin("保健品"));
 //        }
 
 
@@ -316,15 +316,16 @@ public class StringTest {
     }
 
 
-
-    /** === ============================ ==*/
+    /**
+     * === ============================ ==
+     */
     public List<String> sortErrorList(List<String> errorList) {
 
         if (CollectionUtils.isEmpty(errorList)) {
             return errorList;
         }
 
-        errorList = errorList.stream().sorted((o1,o2)-> {
+        errorList = errorList.stream().sorted((o1, o2) -> {
             //定义排序规则
             int firstRow = 0;
             int secondRow = 0;
@@ -342,8 +343,8 @@ public class StringTest {
                 return 1;
             }
 
-            firstRow =  Integer.valueOf(o1.substring(index1+1,index2));
-            secondRow =  Integer.valueOf(o2.substring(index3+1,index4));
+            firstRow = Integer.valueOf(o1.substring(index1 + 1, index2));
+            secondRow = Integer.valueOf(o2.substring(index3 + 1, index4));
 
             return firstRow - secondRow;
         }).collect(Collectors.toList());
@@ -352,7 +353,7 @@ public class StringTest {
 
     /**
      * 生成随机的符合规则的条码
-     * */
+     */
     public static synchronized String randomBarcode(String start, int end) {
         if (end < 1) {
             end = 1;
@@ -360,7 +361,7 @@ public class StringTest {
         if (end > 999) {
             end = 999;
         }
-        if( StringUtils.isBlank(start) ){
+        if (StringUtils.isBlank(start)) {
             start = "";
         }
 
@@ -374,5 +375,12 @@ public class StringTest {
 
 
         return string;
+    }
+
+    @Test
+    public void run20() {
+        BigDecimal bigDecimal = new BigDecimal("20.122");
+        BigDecimal divide = bigDecimal.divide(BigDecimal.valueOf(100L), 4, BigDecimal.ROUND_HALF_UP);
+        System.out.println(divide);
     }
 }

@@ -2,21 +2,23 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>java_knowledge_sea</artifactId>
+        <groupId>com.zbq</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.zbq</groupId>
-    <artifactId>java_knowledge_sea</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>netty-learn</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <modules>
-        <module>netty_learn</module>
-    </modules>
-    <dependencies>
 
+
+    <dependencies>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>5.0.0.Alpha2</version>
         </dependency>
     </dependencies>
 
