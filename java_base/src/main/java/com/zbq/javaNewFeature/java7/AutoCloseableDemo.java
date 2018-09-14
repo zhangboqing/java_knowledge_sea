@@ -21,9 +21,43 @@ public class AutoCloseableDemo {
     public static class AutoCloseableObjecct implements AutoCloseable {
         @Override
         public void close() throws Exception {
-            System.out.println("--close--");
+            System.out.println("--AutoCloseableObjecct close--");
         }
 
+    }
+
+
+    //自己定义类 并实现AutoCloseable
+    public static class AutoCloseableObjecct2 implements AutoCloseable {
+        private AutoCloseableObjecct autoCloseableObjecct;
+
+        public AutoCloseableObjecct2(AutoCloseableObjecct autoCloseableObjecct) {
+            this.autoCloseableObjecct = autoCloseableObjecct;
+        }
+
+        @Override
+        public void close() throws Exception {
+            System.out.println("--AutoCloseableObjecct2 close--");
+        }
+
+    }
+
+
+    //注意：利用try-with-resource时，嵌套创建的对象，最外层的对象能自动释放，里面的对象是不会自动释放的
+    @Test
+    public void run() throws Exception {
+        try (AutoCloseableObjecct2 autoCloseableObjecct2 = new AutoCloseableObjecct2(new AutoCloseableObjecct())) {
+
+            System.out.println("1");
+        }
+    }
+
+    @Test
+    public void run2() throws Exception {
+        try (AutoCloseableObjecct autoCloseableObjecct = new AutoCloseableObjecct();AutoCloseableObjecct2 autoCloseableObjecct2 = new AutoCloseableObjecct2(autoCloseableObjecct)) {
+
+            System.out.println("2");
+        }
     }
 
 
