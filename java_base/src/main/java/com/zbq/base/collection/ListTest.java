@@ -1,5 +1,7 @@
 package com.zbq.base.collection;
 
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,6 +11,22 @@ import java.util.List;
  */
 public class ListTest {
 
+
+    @Test
+    public void run() {
+        List<String> list1 = new ArrayList<String>();
+        list1.add("A");
+        list1.add("B");
+
+        List<String> list2 = new ArrayList<String>();
+        list2.add("c");
+        list2.add("C");
+
+        boolean b = list1.retainAll(list2);
+        System.out.println(list1);
+        System.out.println(list2);
+        System.out.println(b);
+    }
 
 
     public static void main(String[] args) {
@@ -43,4 +61,6 @@ public class ListTest {
 
 //        运行结果：A
     }
+
+
 }

@@ -26,6 +26,11 @@ public class BigDecimalTest {
         System.out.println(byte2hex(bytes));
     }
 
+    @Test
+    public void run3() {
+        System.out.println(BigDecimal.valueOf(100.99).stripTrailingZeros().toPlainString());
+    }
+
 
     private static String byte2hex(byte[] bytes) {
         StringBuilder sign = new StringBuilder();

@@ -156,6 +156,18 @@
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
 
+		<!--http-->
+		<dependency>
+			<groupId>org.jodd</groupId>
+			<artifactId>jodd-http</artifactId>
+			<version>3.7.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.squareup.okhttp3</groupId>
+			<artifactId>okhttp</artifactId>
+			<version>3.4.2</version>
+		</dependency>
+
 	</dependencies>
 
 

@@ -1,5 +1,7 @@
 package com.zbq.base.javabase;
 
+import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.zbq.base.javabase.bean.Haha;
 import com.zbq.base.javabase.bean.User;
@@ -12,6 +14,7 @@ import org.springframework.util.Assert;
 import org.springframework.util.CollectionUtils;
 
 import java.math.BigDecimal;
+import java.net.MalformedURLException;
 import java.text.NumberFormat;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -378,9 +381,12 @@ public class StringTest {
     }
 
     @Test
-    public void run20() {
-        BigDecimal bigDecimal = new BigDecimal("20.122");
-        BigDecimal divide = bigDecimal.divide(BigDecimal.valueOf(100L), 4, BigDecimal.ROUND_HALF_UP);
-        System.out.println(divide);
+    public void run20() throws MalformedURLException {
+
+//        JSONArray jsonArray = JSON.parseArray("[{'name':'121','id':'1'},{'name':'222','id':'12'}]");
+        JSONArray jsonArray = JSON.parseArray("[]");
+        List<Integer> permissionIdList = jsonArray.stream().map((a) -> (JSONObject) a).map((a) -> a.getInteger("id")).collect(Collectors.toList());
+        System.out.println(permissionIdList);
+
     }
 }

@@ -33,4 +33,23 @@ public class SetTest {
         set2.add(4);
         System.out.println("HashSet:"+set2);
     }
+
+    @Test
+    public void run2() {
+        HashSet<Long> longs = new HashSet<>();
+        longs.add(1L);
+        longs.add(2L);
+        longs.add(3L);
+        longs.add(4L);
+
+        System.out.println(longs.toArray());
+
+        System.out.println("===========================");
+
+        Long[] longs1 = new Long[longs.size()];
+        Long[] longs2 = longs.toArray(longs1);
+        System.out.println(longs2);
+
+        System.out.println(longs1);
+    }
 }

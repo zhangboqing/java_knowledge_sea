@@ -6,6 +6,14 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+/**
+ * try-with-resource
+ *
+ * try{资源申明}
+ * 资源申明的注意事项：
+ * 1.声明的变量的类型必须是AutoCloseable的子类型，否则会发生编译时错误
+ *
+ */
 public class AutoCloseableDemo {
     public static void main(String[] args) {
         try (AutoCloseableObjecct app = new AutoCloseableObjecct()) {
@@ -15,6 +23,12 @@ public class AutoCloseableDemo {
         } finally {
             System.out.println("--finally--");
         }
+    }
+
+
+    //自己定义类 没有实现AutoCloseable
+    public static class Objecct  {
+
     }
 
     //自己定义类 并实现AutoCloseable
