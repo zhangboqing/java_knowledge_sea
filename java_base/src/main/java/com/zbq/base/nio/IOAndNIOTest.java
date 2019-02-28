@@ -23,7 +23,7 @@ public class IOAndNIOTest {
             byte[] buf = new byte[1024];
             int bytesRead = in.read(buf);
             while (bytesRead != -1) {
-                new String(buf);
+                System.out.println(new String(buf));
                 for (int i = 0; i < bytesRead; i++) {
                     System.out.print((char) buf[i]);
                 }

@@ -1,12 +1,12 @@
 package com.zbq.javaNewFeature.java8.demo2.exer;
 
+import com.zbq.javaNewFeature.java8.demo3.java8.Employee;
+import org.junit.Test;
+
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import org.junit.Test;
-
-import com.atguigu.java8.Employee;
 
 public class TestLambda {
 	

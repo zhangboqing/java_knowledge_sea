@@ -10,7 +10,6 @@ import com.zbq.utils.PinYinUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.junit.Test;
 import org.springframework.beans.BeanUtils;
-import org.springframework.util.Assert;
 import org.springframework.util.CollectionUtils;
 
 import java.math.BigDecimal;
@@ -27,7 +26,7 @@ public class StringTest {
 
     @Test
     public void run1() {
-        String a = "1";
+       /* String a = "1";
         String b = "1";
 
         System.out.println(String.join(".", a, b));
@@ -36,8 +35,12 @@ public class StringTest {
         list = null;
         Assert.notEmpty(list);
 
-        System.out.println("ahha ");
+        System.out.println("ahha ");*/
 
+
+        String str = "invoke-log-aspect-thread-pool-%d";
+        String format = String.format(str,new Random().nextInt());
+        System.out.println(format);
 
     }
 
