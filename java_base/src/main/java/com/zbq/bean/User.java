@@ -25,6 +25,14 @@ public class User {
         this.age = age;
     }
 
+    public User() {
+    }
+
+    public User(String username, Integer age) {
+        this.username = username;
+        this.age = age;
+    }
+
     @Override
     public String toString() {
         return "User{" +

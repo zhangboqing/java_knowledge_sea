@@ -1,8 +1,4 @@
 /**
-  * 项目名：SpiderCrawler
-  * 文件名：BloomFilterTest.java
-  * 作者：zhouyh
-  * 时间：2014-8-29 下午02:54:56
   * 描述：TODO(用一句话描述该文件做什么)
   */
 package com.zbq.utils;
@@ -18,8 +14,6 @@ import java.util.BitSet;
 /**
  * 类名： BloomFilterTest
  * 包名： com.utilTest
- * 作者： zhouyh
- * 时间： 2014-8-29 下午02:54:56
  * 描述： 布隆过滤器，传统的布隆过滤器不支持从集合中删除成员
  */
 public class BloomFilterTest {
@@ -56,8 +50,6 @@ public class BloomFilterTest {
 	/**
 	 *
 	 * 方法名：add
-	 * 作者：zhouyh
-	 * 创建时间：2014-8-30 下午02:07:35
 	 * 描述：将给定的字符串标记到bitSets中，即设置字符串的8个函数值的位置为1
 	 * @param value
 	 */
@@ -69,8 +61,6 @@ public class BloomFilterTest {
 	/**
 	 *
 	 * 方法名：isExit
-	 * 作者：zhouyh
-	 * 创建时间：2014-8-30 下午02:12:30
 	 * 描述：判断给定的字符串是否已经存在在bloofilter中，如果存在返回true，不存在返回false
 	 * @param value
 	 * @return
@@ -94,8 +84,6 @@ public class BloomFilterTest {
 	/**
 	 *
 	 * 方法名：init
-	 * 作者：zhouyh
-	 * 创建时间：2014-8-30 下午02:28:49
 	 * 描述：读取配置文件
 	 */
 	public void init(){
@@ -125,8 +113,6 @@ public class BloomFilterTest {
 	/**
 	 *
 	 * 方法名：read
-	 * 作者：zhouyh
-	 * 创建时间：2014-8-30 下午02:26:59
 	 * 描述：根据传入的流，初始化bloomfilter
 	 * @param in
 	 */
@@ -179,8 +165,6 @@ public class BloomFilterTest {
 
 	/**
 	 * 方法名：main
-	 * 作者：zhouyh
-	 * 创建时间：2014-8-29 下午02:54:56
 	 * 描述：TODO(这里用一句话描述这个方法的作用)
 	 * @param args
 	 */
@@ -202,7 +186,6 @@ public class BloomFilterTest {
 		/**
 		 *
 		 * 构造函数
-		 * 作者：zhouyh
 		 * @param cap
 		 * @param seed
 		 */
@@ -213,8 +196,6 @@ public class BloomFilterTest {
 		/**
 		 *
 		 * 方法名：hash
-		 * 作者：zhouyh
-		 * 创建时间：2014-8-30 下午01:47:10
 		 * 描述：计算hash的函数，用户可以选择其他更好的hash函数
 		 * @param value
 		 * @return
