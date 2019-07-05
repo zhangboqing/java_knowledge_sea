@@ -2,7 +2,11 @@ package com.zbq.base.collection;
 
 import org.junit.Test;
 
+import java.time.Duration;
+import java.time.Instant;
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -10,6 +14,28 @@ import java.util.List;
  * @date 2018/9/12
  */
 public class ListTest {
+
+    @Test
+    public void run2() {
+        LinkedList<Integer> linkedList = new LinkedList<>();
+        for (int i = 0; i < 10000; i++) {
+            linkedList.add(i);
+        }
+
+        Instant now = Instant.now();
+        for (int i = 0; i < linkedList.size(); i++) {
+            linkedList.get(i);
+        }
+        Instant now2 = Instant.now();
+        System.out.println(Duration.between(now,now2).toMillis());
+
+        Iterator<Integer> iterator = linkedList.iterator();
+        if (iterator.hasNext()) {
+            iterator.next();
+        }
+        Instant now3 = Instant.now();
+        System.out.println(Duration.between(now2,now3).toMillis());
+    }
 
 
     @Test
@@ -61,6 +87,8 @@ public class ListTest {
 
 //        运行结果：A
     }
+
+
 
 
 }

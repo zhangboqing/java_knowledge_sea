@@ -1,6 +1,7 @@
 package com.zbq.base.javabase;
 
 import org.junit.Test;
+import org.springframework.context.ApplicationListener;
 
 /**
  * @author zhangboqing
@@ -16,9 +17,12 @@ public class BaseClassTest {
 
     @Test
     public  void run2() {
-        Integer var1 = new Integer(100);
-        Integer var2 = 100;
-        System.out.println(var1 == var2);
+//        Integer var1 = new Integer(100);
+//        Integer var2 = 100;
+        if (null instanceof ApplicationListener) {
+            System.out.println(1);
+        }
+//        System.out.println(var1 == var2);
     }
 
 }
